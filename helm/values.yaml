@@ -4,9 +4,9 @@ service:
   port: 4111
   protocol: TCP
   targetPort: 3111
-  type: ClusterIP 
+  type: ClusterIP
 image:
-  repository: myaxu/techtrends  
+  repository: myaxu/techtrends
   tag: latest
   pullPolicy: IfNotPresent
 replicaCount: 1
@@ -17,8 +17,13 @@ resources:
   limits:
     cpu: 500m
     memory: 128Mi
-  containerPort: 3111  
-  readinessProb:
+containerPort: 3111
+livenessProbe:
+  httpGet:
     path: /healthz
-  livenessProb:
+    port: 3111
+readinessProbe:
+  httpGet:
     path: /healthz
+    port: 3111
+    
