@@ -5,7 +5,6 @@
 
 TechTrends is an `online website` used as a news sharing platform, that enables consumers to access the latest news within the cloud-native ecosystem. In addition to accessing the available articles, readers are able to create new media articles and share them. We package and deploy TechTrends to Kubernetes using a CI/CD pipeline.
 
-
 The web application is written using the **Python Flask framework**. It uses **SQLite**, a lightweight disk-based database to store the submitted articles.
 
 ## Web Application & Database
@@ -31,14 +30,14 @@ The web application is written using the **Python Flask framework**. It uses **S
 
 ## CD tooling
 
-- argo-cd
+- ArgoCD
 
 ## Deployment on multiple Kubernetes clusters
 
 - Helm
 
 
-# Project Steps Overview
+## Project Steps Overview
 
 1. Apply the best development practices and develop the status and  `health check endpoints` for the TechTrends application.
 2. Package the TechTrends application by creating a `Dockerfile` and `Docker image`.
